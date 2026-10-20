@@ -1,0 +1,16 @@
+[Unit]
+Description=DCK Brands django-q cluster
+After=network.target
+
+[Service]
+User=dck
+Group=www-data
+WorkingDirectory=/home/dck/brands/backend
+Environment="PATH=/home/dck/brands/backend/venv/bin"
+Environment="DJANGO_SETTINGS_MODULE=config.settings"
+ExecStart=/home/dck/brands/backend/venv/bin/python manage.py qcluster
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

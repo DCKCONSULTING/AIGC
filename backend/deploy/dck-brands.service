@@ -1,0 +1,25 @@
+[Unit]
+Description=DCK Brands Gunicorn
+After=network.target
+
+[Service]
+User=dck
+Group=www-data
+WorkingDirectory=/home/dck/brands/backend
+Environment="PATH=/home/dck/brands/backend/venv/bin"
+Environment="DJANGO_SETTINGS_MODULE=config.settings"
+RuntimeDirectory=dck-brands
+RuntimeDirectoryMode=0775
+ExecStart=/home/dck/brands/backend/venv/bin/gunicorn \
+    --workers 3 \
+    --timeout 300 \
+    --graceful-timeout 30 \
+    --bind unix:/run/dck-brands/gunicorn.sock \
+    --access-logfile - \
+    --error-logfile - \
+    config.wsgi:application
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

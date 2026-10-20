@@ -1,0 +1,12 @@
+Django>=6.1,<6.2
+djangorestframework>=3.16
+django-cors-headers>=4.7
+Pillow>=12.0
+python-dotenv>=1.0
+google-genai>=1.40
+google-cloud-speech>=2.30
+google-cloud-texttospeech>=2.27
+django-q2>=1.8
+imageio-ffmpeg>=0.5
+httpx>=0.28
+openai>=1.80

@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0868f7" />
+    <meta name="description" content="MiSa AI video creation platform for Malaysian brands" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 64 64%22><rect width=%2264%22 height=%2264%22 rx=%2218%22 fill=%22%23ffc928%22/><text x=%2213%22 y=%2240%22 font-size=%2224%22 font-family=%22Arial%22 font-weight=%22700%22 fill=%22%2317324d%22>MI</text></svg>" />
+    <title>MiSa — AI video generation platform</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div id="app" class="app-shell">
+      <aside class="sidebar" aria-label="Primary navigation">
+        <button class="brand" data-route="home" aria-label="MISA home">
+          <span class="inner-misa-logo" aria-hidden="true"></span>
+          <span class="sr-only">MiSa — AI video generation platform</span>
+        </button>
+        <nav id="sidebarNav"></nav>
+        <div class="sidebar-foot">
+          <button class="merchant-card" data-route="settings">
+            <span class="avatar">WR</span>
+            <span><strong>William Retail</strong><small>Pilot workspace</small></span>
+            <span aria-hidden="true">›</span>
+          </button>
+        </div>
+      </aside>
+
+      <div class="workspace">
+        <header class="topbar">
+          <button id="menuButton" class="icon-button mobile-only" aria-label="Open menu">☰</button>
+          <div class="crumb"><span id="pageEyebrow">Workspace</span><strong id="pageTitle">Today</strong></div>
+          <div class="top-actions">
+            <button class="quiet-button" data-route="support">Help</button>
+            <button class="primary-button compact" data-route="create"><span>＋</span> Create video</button>
+          </div>
+        </header>
+        <main id="main" tabindex="-1"></main>
+      </div>
+
+      <nav id="mobileNav" class="mobile-nav" aria-label="Mobile navigation"></nav>
+      <div id="toast" class="toast" role="status" aria-live="polite"></div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
